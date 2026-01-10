@@ -411,8 +411,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
-
       {/* Gallery Section */}
       <section id="gallery" className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
@@ -436,6 +434,7 @@ export default function Home() {
                     <img src={img} alt={`Project ${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </DialogTrigger>
                   <DialogContent className="max-w-[90vw] h-[90vh] flex items-center justify-center p-0 overflow-hidden bg-black/90">
+                    <DialogTitle className="sr-only">Project Image {i}</DialogTitle>
                     <img src={img} alt={`Project ${i}`} className="max-w-full max-h-full object-contain" />
                   </DialogContent>
                 </Dialog>
