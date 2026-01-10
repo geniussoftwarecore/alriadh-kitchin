@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <img src={logoUrl} alt="Riyadh Kitchens Factory" className="h-16 w-auto brightness-0 invert" />
+            <img src={logoUrl} alt="Riyadh Kitchens Factory" className="h-16 w-auto brightness-0 invert [mix-blend-mode:lighten]" />
             <p className="text-gray-400 leading-relaxed text-lg">
               نحن في مصنع الرياض للمطابخ نقدم أفضل حلول المطابخ والألمنيوم في المملكة، بخبرة تمتد لأكثر من 15 عاماً من الإبداع والتميز.
             </p>
@@ -52,11 +52,20 @@ export function Footer() {
           <div>
             <h4 className="text-xl font-bold mb-6 text-accent">خدماتنا</h4>
             <ul className="space-y-4">
-              {['تفصيل مطابخ مودرن', 'مطابخ كلاسيك', 'شبابيك المنيوم', 'صيانة وتركيب', 'استشارات تصميم'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                    {item}
-                  </a>
+              {[
+                { label: 'تفصيل مطابخ مودرن', id: '#services' },
+                { label: 'مطابخ كلاسيك', id: '#services' },
+                { label: 'شبابيك المنيوم', id: '#services' },
+                { label: 'صيانة وتركيب', id: '#services' },
+                { label: 'استشارات تصميم', id: '#services' }
+              ].map((item) => (
+                <li key={item.label}>
+                  <button 
+                    onClick={() => document.querySelector(item.id)?.scrollIntoView({ behavior: 'smooth' })}
+                    className="text-gray-400 hover:text-white transition-colors text-right w-full"
+                  >
+                    {item.label}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -80,8 +89,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="w-6 h-6 text-accent shrink-0" />
-                <a href="mailto:info@arhousekit.com" className="text-gray-400 hover:text-white">
-                  info@arhousekit.com
+                <a href="mailto:alhmyqanykhtab30@gmail.com" className="text-gray-400 hover:text-white">
+                  alhmyqanykhtab30@gmail.com
                 </a>
               </li>
             </ul>
@@ -89,7 +98,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center text-gray-500">
-          <p>© {new Date().getFullYear()} البيت العربي للمطابخ. جميع الحقوق محفوظة.</p>
+          <p>© {new Date().getFullYear()} مصنع الرياض للمطابخ. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>

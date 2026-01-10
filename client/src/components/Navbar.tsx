@@ -48,8 +48,8 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <img 
             src={logoUrl} 
-            alt="AR House Kit" 
-            className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            alt="Riyadh Kitchens Factory" 
+            className="h-12 w-auto object-contain transition-transform group-hover:scale-105 [mix-blend-mode:multiply]"
           />
         </Link>
 

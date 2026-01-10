@@ -393,6 +393,12 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
+                <div className="flex items-center gap-4">
+                  <Mail className="w-6 h-6 text-accent shrink-0" />
+                  <a href="mailto:alhmyqanykhtab30@gmail.com" className="text-lg font-bold text-primary hover:text-accent transition-colors">
+                    alhmyqanykhtab30@gmail.com
+                  </a>
+                </div>
               </div>
 
               {/* Map Embed Placeholder - Static Image for visual */}
