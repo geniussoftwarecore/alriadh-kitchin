@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logoUrl from "@assets/haron's_logo_1768065683367.png";
+import logoUrl from "@assets/haron's_logo_1768070581366.png";
 
 const links = [
   { href: "/", label: "الرئيسية" },
@@ -46,17 +46,11 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="h-12 w-auto overflow-hidden flex items-center justify-center">
-            <img 
-              src={logoUrl} 
-              alt="Riyadh Kitchens Factory" 
-              className="h-20 w-auto object-contain transition-transform group-hover:scale-105"
-              style={ { 
-                clipPath: 'circle(40% at 50% 50%)',
-                transform: 'scale(1.8)'
-              } }
-            />
-          </div>
+          <img 
+            src={logoUrl} 
+            alt="Riyadh Kitchens Factory" 
+            className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Links */}

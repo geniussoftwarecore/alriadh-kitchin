@@ -1,5 +1,5 @@
-import logoUrl from "@assets/haron's_logo_1768065683367.png";
-import { Phone, MapPin, Mail, Instagram, Twitter, Facebook, Video, MessageSquare } from "lucide-react";
+import logoUrl from "@assets/haron's_logo_1768070581366.png";
+import { Phone, MapPin, Mail, Instagram, Twitter, Facebook, Video, MessageSquare, Clock } from "lucide-react";
 import { SiTiktok, SiInstagram, SiSnapchat, SiX } from "react-icons/si";
 
 export function Footer() {
@@ -13,14 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="h-16 w-16 overflow-hidden rounded-full bg-white flex items-center justify-center">
-              <img 
-                src={logoUrl} 
-                alt="Riyadh Kitchens Factory" 
-                className="h-24 w-auto object-contain"
-                style={ { transform: 'scale(1.5)' } }
-              />
-            </div>
+            <img src={logoUrl} alt="Riyadh Kitchens Factory" className="h-16 w-auto" />
             <p className="text-gray-400 leading-relaxed text-lg">
               نحن في مصنع الرياض للمطابخ نقدم أفضل حلول المطابخ والألمنيوم في المملكة، بخبرة تمتد لأكثر من 15 عاماً من الإبداع والتميز.
             </p>
@@ -44,7 +37,7 @@ export function Footer() {
           <div>
             <h4 className="text-xl font-bold mb-6 text-accent">روابط سريعة</h4>
             <ul className="space-y-4">
-              {['الرئيسية', 'خدماتنا', 'عن الشركة', 'معرض الأعمال', 'اتصل بنا'].map((item) => (
+              {['الرئيسية', 'خدماتنا', 'من نحن', 'معرض الأعمال', 'اتصل بنا'].map((item) => (
                 <li key={item}>
                   <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent group-hover:w-3 transition-all" />
@@ -104,6 +97,13 @@ export function Footer() {
                 <a href="mailto:alhmyqanykhtab30@gmail.com" className="text-gray-400 hover:text-white">
                   alhmyqanykhtab30@gmail.com
                 </a>
+              </li>
+              <li className="flex items-start gap-4 border-t border-white/10 pt-4 mt-4">
+                <Clock className="w-6 h-6 text-accent shrink-0 mt-1" />
+                <div className="flex flex-col">
+                  <span className="text-white font-bold">أوقات الدوام (24 ساعة)</span>
+                  <span className="text-gray-400">من السبت إلى الأحد</span>
+                </div>
               </li>
             </ul>
           </div>
