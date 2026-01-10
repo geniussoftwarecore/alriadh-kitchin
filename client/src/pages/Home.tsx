@@ -16,8 +16,20 @@ import galleryImg1 from "@assets/IMG-20251226-WA0012_1768073924010.jpg";
 import galleryImg2 from "@assets/IMG-20251226-WA0017_1768073936601.jpg";
 import galleryImg3 from "@assets/IMG-20251226-WA0025_1768073950332.jpg";
 import galleryImg4 from "@assets/IMG-20251226-WA0050_1768073975275.jpg";
+import galleryImg5 from "@assets/333_1768077537150.jpeg";
+import galleryImg6 from "@assets/444_1768077537151.jpeg";
+import galleryImg7 from "@assets/888_1768077537152.jpeg";
+import galleryImg8 from "@assets/iii_1768077537153.jpeg";
+import galleryImg9 from "@assets/تصميم_بدون_عنوان_(4)_1768077609849.png";
+import galleryImg10 from "@assets/تصميم_بدون_عنوان_(3)_1768077641647.png";
+import galleryImg11 from "@assets/تصميم_بدون_عنوان_(2)_1768077641648.png";
+import galleryImg12 from "@assets/تصميم_بدون_عنوان_(1)_1768077641649.png";
+import galleryImg13 from "@assets/WhatsApp_Image_2026-01-10_at_11.38.37_PM_1768077730451.jpeg";
 
 const allProjectImages = [
+  galleryImg5, galleryImg6, galleryImg7, galleryImg8,
+  galleryImg9, galleryImg10, galleryImg11, galleryImg12,
+  galleryImg13,
   galleryImg1, galleryImg2, galleryImg3, galleryImg4,
   kitchenImg1, kitchenImg2, kitchenImg3, windowImg,
   "/attached_assets/IMG-20251226-WA0042(2)_1768063365673.jpg",
