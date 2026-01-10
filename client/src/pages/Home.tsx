@@ -395,7 +395,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="w-6 h-6 text-accent shrink-0" />
-                  <a href="mailto:alhmyqanykhtab30@gmail.com" className="text-lg font-bold text-primary hover:text-accent transition-colors">
+                  <a href="mailto:alhmyqanykhtab30@gmail.com" className="text-lg font-bold text-primary hover:text-accent transition-colors break-all">
                     alhmyqanykhtab30@gmail.com
                   </a>
                 </div>

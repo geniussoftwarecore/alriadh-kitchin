@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <img src={logoUrl} alt="Riyadh Kitchens Factory" className="h-16 w-auto brightness-0 invert [mix-blend-mode:lighten]" />
+            <img src={logoUrl} alt="Riyadh Kitchens Factory" className="h-16 w-auto brightness-0 invert [mix-blend-mode:screen]" />
             <p className="text-gray-400 leading-relaxed text-lg">
               نحن في مصنع الرياض للمطابخ نقدم أفضل حلول المطابخ والألمنيوم في المملكة، بخبرة تمتد لأكثر من 15 عاماً من الإبداع والتميز.
             </p>
@@ -48,7 +48,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h4 className="text-xl font-bold mb-6 text-accent">خدماتنا</h4>
             <ul className="space-y-4">
@@ -61,9 +60,15 @@ export function Footer() {
               ].map((item) => (
                 <li key={item.label}>
                   <button 
-                    onClick={() => document.querySelector(item.id)?.scrollIntoView({ behavior: 'smooth' })}
-                    className="text-gray-400 hover:text-white transition-colors text-right w-full"
+                    onClick={() => {
+                      const element = document.querySelector(item.id);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="text-gray-400 hover:text-white transition-colors text-right w-full flex items-center gap-2 group"
                   >
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent group-hover:w-3 transition-all" />
                     {item.label}
                   </button>
                 </li>
