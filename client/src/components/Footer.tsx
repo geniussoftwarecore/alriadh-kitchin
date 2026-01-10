@@ -13,11 +13,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <img 
-              src={logoUrl} 
-              alt="Riyadh Kitchens Factory" 
-              className="h-16 w-auto brightness-0 invert [mix-blend-mode:lighten]" 
-            />
+            <div className="h-16 w-16 overflow-hidden rounded-full bg-white flex items-center justify-center">
+              <img 
+                src={logoUrl} 
+                alt="Riyadh Kitchens Factory" 
+                className="h-24 w-auto object-contain"
+                style={ { transform: 'scale(1.5)' } }
+              />
+            </div>
             <p className="text-gray-400 leading-relaxed text-lg">
               نحن في مصنع الرياض للمطابخ نقدم أفضل حلول المطابخ والألمنيوم في المملكة، بخبرة تمتد لأكثر من 15 عاماً من الإبداع والتميز.
             </p>

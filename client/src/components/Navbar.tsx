@@ -46,11 +46,17 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <img 
-            src={logoUrl} 
-            alt="Riyadh Kitchens Factory" 
-            className="h-12 w-auto object-contain transition-transform group-hover:scale-105 [mix-blend-mode:multiply]"
-          />
+          <div className="h-12 w-auto overflow-hidden flex items-center justify-center">
+            <img 
+              src={logoUrl} 
+              alt="Riyadh Kitchens Factory" 
+              className="h-20 w-auto object-contain transition-transform group-hover:scale-105"
+              style={ { 
+                clipPath: 'circle(40% at 50% 50%)',
+                transform: 'scale(1.8)'
+              } }
+            />
+          </div>
         </Link>
 
         {/* Desktop Links */}
