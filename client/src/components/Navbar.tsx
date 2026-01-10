@@ -70,22 +70,32 @@ export function Navbar() {
         </div>
 
         {/* Desktop Contact Icons */}
-        <div className="hidden md:flex items-center gap-4 ml-4">
+        <div className="hidden md:flex items-center gap-3 mr-4">
           <a 
             href="tel:0501755938" 
-            className={`p-2 rounded-full transition-all hover:scale-110 ${isScrolled ? 'bg-primary/10 text-primary' : 'bg-white/20 text-white'}`}
+            className={`flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all duration-300 hover:scale-105 active:scale-95 ${
+              isScrolled 
+                ? "bg-primary/5 border-primary/20 text-primary hover:bg-primary hover:text-white" 
+                : "bg-white/10 border-white/20 text-white hover:bg-white hover:text-primary"
+            }`}
             title="اتصل بنا"
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-4 h-4" />
+            <span className="text-sm font-bold dir-ltr">0501755938</span>
           </a>
           <a 
             href="https://wa.me/966501755938" 
             target="_blank" 
             rel="noopener noreferrer"
-            className={`p-2 rounded-full transition-all hover:scale-110 ${isScrolled ? 'bg-green-500/10 text-green-600' : 'bg-green-500 text-white'}`}
+            className={`flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all duration-300 hover:scale-105 active:scale-95 ${
+              isScrolled 
+                ? "bg-green-500/5 border-green-500/20 text-green-600 hover:bg-green-500 hover:text-white" 
+                : "bg-green-500/20 border-green-500/30 text-white hover:bg-green-500"
+            }`}
             title="واتساب"
           >
-            <MessageCircle className="w-5 h-5" />
+            <MessageCircle className="w-4 h-4 fill-current" />
+            <span className="text-sm font-bold">واتساب</span>
           </a>
         </div>
 
@@ -103,11 +113,23 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="md:hidden flex items-center gap-3">
-          <a href="https://wa.me/966501755938" target="_blank" rel="noopener noreferrer" className={`p-2 rounded-full ${isScrolled ? 'bg-green-500/10 text-green-600' : 'bg-green-500 text-white'}`}>
-            <MessageCircle className="w-5 h-5" />
+        <div className="md:hidden flex items-center gap-2">
+          <a 
+            href="https://wa.me/966501755938" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={`p-2 rounded-full border transition-all active:scale-90 ${
+              isScrolled ? "bg-green-500/10 border-green-500/20 text-green-600" : "bg-green-500 border-green-600 text-white shadow-lg shadow-green-500/20"
+            }`}
+          >
+            <MessageCircle className="w-5 h-5 fill-current" />
           </a>
-          <a href="tel:0501755938" className={`p-2 rounded-full ${isScrolled ? 'bg-primary/10 text-primary' : 'bg-white/20 text-white'}`}>
+          <a 
+            href="tel:0501755938" 
+            className={`p-2 rounded-full border transition-all active:scale-90 ${
+              isScrolled ? "bg-primary/5 border-primary/10 text-primary" : "bg-white/20 border-white/30 text-white"
+            }`}
+          >
             <Phone className="w-5 h-5" />
           </a>
           

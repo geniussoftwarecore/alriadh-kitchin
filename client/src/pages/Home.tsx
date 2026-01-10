@@ -125,10 +125,11 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[90vh] min-h-[700px] flex items-center justify-center overflow-hidden">
         {/* Unsplash kitchen image with dark overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent z-10" />
+          <div className="absolute inset-0 bg-black/20 z-0" />
           <img
             src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=2768&auto=format&fit=crop" 
             alt="Modern Kitchen Background"
@@ -138,34 +139,43 @@ export default function Home() {
 
         <div className="container mx-auto px-4 md:px-8 relative z-20 text-center md:text-right pt-20">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-3xl"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="max-w-4xl"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent border border-accent/30 font-bold mb-6 backdrop-blur-sm">
-              ✨ الجودة الأولى في الرياض
-            </span>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              تفصيل مطابخ المنيوم <br />
-              <span className="text-accent">بتصاميم عصرية</span> في الرياض
+            <motion.span 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="inline-flex items-center px-4 py-2 rounded-full bg-accent text-white font-bold mb-8 shadow-xl shadow-accent/30"
+            >
+              <Star className="w-4 h-4 ml-2 fill-current" />
+              الخيار الأول لتفصيل المطابخ في الرياض
+            </motion.span>
+            <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-[1.1] tracking-tight">
+              نصمم <span className="text-accent underline decoration-white/20 underline-offset-8">مطبخ العمر</span> <br />
+              بإتقان لا يضاهى
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed max-w-2xl">
-              نحول مطبخ أحلامك إلى واقع بجودة لا تضاهى. تصاميم مبتكرة، خامات ممتازة، وضمان يدوم لسنوات.
+            <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-2xl font-medium drop-shadow-md">
+              خبرة 16 عاماً في تحويل المساحات إلى تحف فنية. نجمع بين أحدث التقنيات الألمانية وأرقى التصاميم العصرية بضمان حقيقي.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start items-center">
               <Button 
                 onClick={scrollToContact}
-                className="h-14 px-8 text-lg font-bold rounded-full bg-accent hover:bg-accent/90 shadow-lg shadow-accent/25 hover:shadow-xl hover:-translate-y-1 transition-all"
+                size="lg"
+                className="h-16 px-10 text-xl font-bold rounded-full bg-accent hover:bg-accent/90 shadow-2xl shadow-accent/40 hover:-translate-y-1 transition-all active:scale-95 group"
               >
-                احجز موعد استشارة مجانية
+                ابدأ مشروعك الآن
+                <CheckCircle2 className="mr-2 h-6 w-6 transition-transform group-hover:rotate-12" />
               </Button>
               <Button 
                 variant="outline"
-                className="h-14 px-8 text-lg font-bold rounded-full border-white/30 text-primary bg-white hover:bg-white/90 shadow-lg"
+                size="lg"
+                className="h-16 px-10 text-xl font-bold rounded-full border-2 border-white/50 text-white bg-white/10 backdrop-blur-md hover:bg-white hover:text-primary transition-all active:scale-95"
                 onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })}
               >
-                اكتشف خدماتنا
+                تصفح أعمالنا
               </Button>
             </div>
           </motion.div>
