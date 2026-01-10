@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import logoUrl from "@assets/haron's_logo_1768070581366.png";
@@ -69,6 +69,26 @@ export function Navbar() {
           ))}
         </div>
 
+        {/* Desktop Contact Icons */}
+        <div className="hidden md:flex items-center gap-4 ml-4">
+          <a 
+            href="tel:0501755938" 
+            className={`p-2 rounded-full transition-all hover:scale-110 ${isScrolled ? 'bg-primary/10 text-primary' : 'bg-white/20 text-white'}`}
+            title="اتصل بنا"
+          >
+            <Phone className="w-5 h-5" />
+          </a>
+          <a 
+            href="https://wa.me/966501755938" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`p-2 rounded-full transition-all hover:scale-110 ${isScrolled ? 'bg-green-500/10 text-green-600' : 'bg-green-500 text-white'}`}
+            title="واتساب"
+          >
+            <MessageCircle className="w-5 h-5" />
+          </a>
+        </div>
+
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <Button 
@@ -83,7 +103,10 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="md:hidden flex items-center gap-4">
+        <div className="md:hidden flex items-center gap-3">
+          <a href="https://wa.me/966501755938" target="_blank" rel="noopener noreferrer" className={`p-2 rounded-full ${isScrolled ? 'bg-green-500/10 text-green-600' : 'bg-green-500 text-white'}`}>
+            <MessageCircle className="w-5 h-5" />
+          </a>
           <a href="tel:0501755938" className={`p-2 rounded-full ${isScrolled ? 'bg-primary/10 text-primary' : 'bg-white/20 text-white'}`}>
             <Phone className="w-5 h-5" />
           </a>

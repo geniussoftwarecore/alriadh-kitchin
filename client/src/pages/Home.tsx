@@ -296,7 +296,7 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  { icon: Trophy, title: "15 سنة خبرة", desc: "سنوات من الإتقان والتميز في السوق" },
+                  { icon: Trophy, title: "16 سنة خبرة", desc: "سنوات من الإتقان والتميز في السوق" },
                   { icon: Users, title: "فريق محترف", desc: "مهندسون وفنيون ذوي كفاءة عالية" },
                   { icon: CheckCircle2, title: "ضمان الجودة", desc: "ضمان شامل على جميع أعمالنا" },
                   { icon: Star, title: "سرعة التنفيذ", desc: "نلتزم بالمواعيد المحددة بدقة" },
@@ -330,9 +330,9 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10 divide-x-reverse">
             {[
-              { number: "15+", label: "سنوات خبرة" },
-              { number: "760+", label: "مشروع منجز" },
-              { number: "640+", label: "عميل سعيد" },
+              { number: "16+", label: "سنوات خبرة" },
+              { number: "527+", label: "مشروع منجز" },
+              { number: "426+", label: "عميل سعيد" },
               { number: "100%", label: "ضمان جودة" },
             ].map((stat, i) => (
               <motion.div

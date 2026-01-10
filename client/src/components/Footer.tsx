@@ -15,7 +15,7 @@ export function Footer() {
           <div className="space-y-6">
             <img src={logoUrl} alt="Riyadh Kitchens Factory" className="h-16 w-auto" />
             <p className="text-gray-400 leading-relaxed text-lg">
-              نحن في مصنع الرياض للمطابخ نقدم أفضل حلول المطابخ والألمنيوم في المملكة، بخبرة تمتد لأكثر من 15 عاماً من الإبداع والتميز.
+              نحن في مصنع الرياض للمطابخ نقدم أفضل حلول المطابخ والألمنيوم في المملكة، بخبرة تمتد لأكثر من 16 عاماً من الإبداع والتميز.
             </p>
             <div className="flex gap-4">
               <a href="https://vm.tiktok.com/ZSHKt68gecydY-UQkPA/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
