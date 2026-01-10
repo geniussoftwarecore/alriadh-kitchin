@@ -1,5 +1,6 @@
-import logoUrl from "@assets/generated_images/modern_logo_for_ar_house_kit_construction_business.png";
-import { Phone, MapPin, Mail, Instagram, Twitter, Facebook } from "lucide-react";
+import logoUrl from "@assets/haron's_logo_1768065683367.png";
+import { Phone, MapPin, Mail, Instagram, Twitter, Facebook, Video, MessageSquare } from "lucide-react";
+import { SiTiktok, SiInstagram, SiSnapchat, SiX } from "react-icons/si";
 
 export function Footer() {
   return (
@@ -12,19 +13,22 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <img src={logoUrl} alt="AR House Kit" className="h-16 w-auto brightness-0 invert" />
+            <img src={logoUrl} alt="Riyadh Kitchens Factory" className="h-16 w-auto brightness-0 invert" />
             <p className="text-gray-400 leading-relaxed text-lg">
-              نحن في البيت العربي للمطابخ نقدم أفضل حلول المطابخ والألمنيوم في المملكة، بخبرة تمتد لأكثر من 15 عاماً من الإبداع والتميز.
+              نحن في مصنع الرياض للمطابخ نقدم أفضل حلول المطابخ والألمنيوم في المملكة، بخبرة تمتد لأكثر من 15 عاماً من الإبداع والتميز.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Instagram className="w-5 h-5" />
+              <a href="https://vm.tiktok.com/ZSHKt68gecydY-UQkPA/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
+                <SiTiktok className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://www.instagram.com/reel/DTQWzWzjLuk/?igsh=MWV6b3EwdjlqMjZ4eA==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
+                <SiInstagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Facebook className="w-5 h-5" />
+              <a href="https://www.snapchat.com/add/mtbkhlrydlswdyh?share_id=2B-W8BsLJmY&locale=ar-EG" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
+                <SiSnapchat className="w-5 h-5" />
+              </a>
+              <a href="https://x.com/alriadhfactory?s=11" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
+                <SiX className="w-5 h-5" />
               </a>
             </div>
           </div>

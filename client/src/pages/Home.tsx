@@ -13,6 +13,26 @@ import kitchenImg2 from "@assets/IMG-20251226-WA0042(1)_1768063365672.jpg";
 import kitchenImg3 from "@assets/IMG-20251226-WA0043_1768063365673.jpg";
 import windowImg from "@assets/IMG-20251226-WA0044(1)_1768063365674.jpg";
 
+const allProjectImages = [
+  kitchenImg1, kitchenImg2, kitchenImg3, windowImg,
+  "/attached_assets/IMG-20251226-WA0042(2)_1768063365673.jpg",
+  "/attached_assets/IMG-20251226-WA0044_1768063365674.jpg",
+  "/attached_assets/IMG-20251226-WA0045_1768063365675.jpg",
+  "/attached_assets/IMG-20251226-WA0048_1768063365675.jpg",
+  "/attached_assets/IMG-20251226-WA0049_1768063365676.jpg",
+  "/attached_assets/IMG-20251226-WA0050_1768063365676.jpg",
+  "/attached_assets/IMG-20251226-WA0051_1768063365676.jpg",
+  "/attached_assets/IMG-20251226-WA0053_1768063365677.jpg",
+  "/attached_assets/IMG-20251226-WA0054_1768063365677.jpg",
+  "/attached_assets/IMG-20260105-WA0006_1768063365678.jpg",
+  "/attached_assets/IMG-20260105-WA0009_1768063365678.jpg",
+  "/attached_assets/IMG-20260105-WA0011_1768063365679.jpg",
+  "/attached_assets/IMG-20260105-WA0018_1768063365679.jpg",
+  "/attached_assets/IMG-20260105-WA0020_1768063365680.jpg",
+  "/attached_assets/IMG-20260105-WA0024_1768063365680.jpg",
+  "/attached_assets/IMG-20260110-WA0001_1768063365680.jpg"
+];
+
 const serviceDetails = {
   kitchens: {
     title: "تفصيل مطابخ عصرية",
@@ -182,6 +202,22 @@ export default function Home() {
             <p className="text-muted-foreground text-lg">
               نقدم حلولاً متكاملة لتجهيز منزلك بأفضل المطابخ والنوافذ، مع التركيز على الجودة والتفاصيل الدقيقة.
             </p>
+            <div className="flex justify-center gap-4 mt-8 flex-wrap">
+              <Button 
+                variant="outline" 
+                className="rounded-full border-primary/20 hover:bg-primary hover:text-white"
+                onClick={() => document.querySelector("#gallery")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                معرض الصور
+              </Button>
+              <Button 
+                variant="outline" 
+                className="rounded-full border-primary/20 hover:bg-primary hover:text-white"
+                onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                من نحن
+              </Button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -252,7 +288,7 @@ export default function Home() {
             </div>
 
             <div className="lg:w-1/2">
-              <span className="text-accent font-bold tracking-wider mb-2 block">لماذا نحن؟</span>
+              <span className="text-accent font-bold tracking-wider mb-2 block">من نحن</span>
               <h2 className="text-4xl font-bold text-primary mb-6">الخبرة والجودة تجتمعان تحت سقف واحد</h2>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
                 نحن لا نقوم فقط بتركيب المطابخ، بل نصنع تجربة معيشية متكاملة. التزامنا بالجودة ورضا العملاء هو ما يميزنا عن غيرنا في السوق السعودي.
@@ -371,6 +407,40 @@ export default function Home() {
             </div>
 
             <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+
+      {/* Gallery Section */}
+      <section id="gallery" className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold text-primary mb-4">معرض أعمالنا</h2>
+            <div className="w-24 h-1.5 bg-accent mx-auto rounded-full mb-6" />
+            <p className="text-muted-foreground text-lg">تصفح مجموعة من مشاريعنا المنفذة بدقة وإتقان.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {allProjectImages.map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer group"
+              >
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <img src={img} alt={`Project ${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  </DialogTrigger>
+                  <DialogContent className="max-w-[90vw] h-[90vh] flex items-center justify-center p-0 overflow-hidden bg-black/90">
+                    <img src={img} alt={`Project ${i}`} className="max-w-full max-h-full object-contain" />
+                  </DialogContent>
+                </Dialog>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

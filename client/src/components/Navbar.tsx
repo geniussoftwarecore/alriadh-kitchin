@@ -3,12 +3,12 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logoUrl from "@assets/generated_images/modern_logo_for_ar_house_kit_construction_business.png";
+import logoUrl from "@assets/haron's_logo_1768065683367.png";
 
 const links = [
   { href: "/", label: "الرئيسية" },
   { href: "#services", label: "خدماتنا" },
-  { href: "#about", label: "عن الشركة" },
+  { href: "#about", label: "من نحن" },
   { href: "#contact", label: "اتصل بنا" },
 ];
 
@@ -106,7 +106,11 @@ export function Navbar() {
                       href={link.href}
                       onClick={(e) => {
                         scrollToSection(e, link.href);
-                        // Close sheet logic is handled by Radix UI typically or needs state lift
+                        // Using a small delay to allow sheet to close if necessary
+                        setTimeout(() => {
+                           const sheetClose = document.querySelector('[data-radix-collection-item]');
+                           if (sheetClose instanceof HTMLElement) sheetClose.click();
+                        }, 100);
                       }}
                       className="text-xl font-medium text-foreground hover:text-primary transition-colors py-2 border-b border-border/50"
                     >
