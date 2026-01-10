@@ -49,7 +49,7 @@ export function Navbar() {
           <img 
             src={logoUrl} 
             alt="Riyadh Kitchens Factory" 
-            className="h-20 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-28 md:h-36 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </Link>
 
