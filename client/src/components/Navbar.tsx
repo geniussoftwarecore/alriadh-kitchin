@@ -49,8 +49,7 @@ export function Navbar() {
           <img 
             src={logoUrl} 
             alt="Riyadh Kitchens Factory" 
-            className="h-12 w-auto object-contain transition-transform group-hover:scale-105 [mix-blend-mode:multiply] dark:invert contrast-125 saturate-150 brightness-[1.05]"
-            style={ { filter: 'drop-shadow(0 0 0 white) contrast(1.2) saturate(1.5)' } }
+            className="h-12 w-auto object-contain transition-transform group-hover:scale-105 [mix-blend-mode:multiply]"
           />
         </Link>
 
