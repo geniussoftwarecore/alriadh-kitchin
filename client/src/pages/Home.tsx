@@ -12,8 +12,13 @@ import kitchenImg1 from "@assets/IMG-20251226-WA0041_1768063365671.jpg";
 import kitchenImg2 from "@assets/IMG-20251226-WA0042(1)_1768063365672.jpg";
 import kitchenImg3 from "@assets/IMG-20251226-WA0043_1768063365673.jpg";
 import windowImg from "@assets/IMG-20251226-WA0044(1)_1768063365674.jpg";
+import galleryImg1 from "@assets/IMG-20251226-WA0012_1768073924010.jpg";
+import galleryImg2 from "@assets/IMG-20251226-WA0017_1768073936601.jpg";
+import galleryImg3 from "@assets/IMG-20251226-WA0025_1768073950332.jpg";
+import galleryImg4 from "@assets/IMG-20251226-WA0050_1768073975275.jpg";
 
 const allProjectImages = [
+  galleryImg1, galleryImg2, galleryImg3, galleryImg4,
   kitchenImg1, kitchenImg2, kitchenImg3, windowImg,
   "/attached_assets/IMG-20251226-WA0042(2)_1768063365673.jpg",
   "/attached_assets/IMG-20251226-WA0044_1768063365674.jpg",
