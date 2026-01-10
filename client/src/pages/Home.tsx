@@ -4,7 +4,96 @@ import { Footer } from "@/components/Footer";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
-import { ChefHat, Hammer, Wrench, LayoutGrid, CheckCircle2, Star, Trophy, Users } from "lucide-react";
+import { ChefHat, Hammer, Wrench, LayoutGrid, CheckCircle2, Star, Trophy, Users, Shield, Lightbulb, Recycle, Clock } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+
+// Provided images mapping
+import kitchenImg1 from "@assets/IMG-20251226-WA0041_1768063365671.jpg";
+import kitchenImg2 from "@assets/IMG-20251226-WA0042(1)_1768063365672.jpg";
+import kitchenImg3 from "@assets/IMG-20251226-WA0043_1768063365673.jpg";
+import windowImg from "@assets/IMG-20251226-WA0044(1)_1768063365674.jpg";
+
+const serviceDetails = {
+  kitchens: {
+    title: "تفصيل مطابخ عصرية",
+    description: "نصمم مطابخ تجمع بين الأناقة والوظيفة، مع التركيز على استغلال المساحات بأحدث التقنيات لعام 2026.",
+    features: [
+      "تصاميم بلمسات خشبية طبيعية ورخام فاخر",
+      "أنظمة إضاءة ذكية مدمجة وتقنيات توفير المساحة",
+      "خامات مقاومة للرطوبة والحرارة وسهلة التنظيف",
+      "حلول تخزين مخفية وأدراج هيدروليكية متطورة"
+    ],
+    image: kitchenImg1
+  },
+  windows: {
+    title: "شبابيك المنيوم عازلة",
+    description: "أنظمة نوافذ متطورة توفر عزلًا فائقًا للصوت والحرارة مع لمسات جمالية عصرية.",
+    features: [
+      "ألمنيوم عالي الكثافة ومقاوم للصدمات والعوامل الجوية",
+      "زجاج مزدوج (Double Glazing) لتقليل استهلاك الطاقة",
+      "تصاميم نحيفة (Slim Frames) لزيادة الإضاءة الطبيعية",
+      "أنظمة إغلاق محكمة للأمان التام ومنع تسرب الغبار"
+    ],
+    image: windowImg
+  },
+  maintenance: {
+    title: "صيانة وتجديد شامل",
+    description: "نعيد الحياة لمطبخك القديم عبر خدمات صيانة احترافية وتحديثات تجعل المساحة تبدو كأنها جديدة.",
+    features: [
+      "تغيير المفصلات والمقابض بأنواع عالمية الجودة",
+      "صيانة أسطح الرخام وتلميعها واستبدال الأجزاء التالفة",
+      "تحديث أنظمة الإضاءة وإضافة اكسسوارات ذكية",
+      "فحص دوري وشامل لضمان سلامة جميع الوحدات"
+    ],
+    image: kitchenImg2
+  },
+  design: {
+    title: "تصاميم معمارية خاصة",
+    description: "خدمات هندسية وتصاميم معمارية مخصصة تحول رؤيتك إلى واقع ملموس بدقة هندسية عالية.",
+    features: [
+      "مخططات ثلاثية الأبعاد (3D) قبل البدء في التنفيذ",
+      "تنسيق متكامل بين الإضاءة والديكور والوظيفة",
+      "استشارات هندسية لاختيار أفضل الخامات والألوان",
+      "إدارة شاملة للمشروع من التصميم حتى التسليم"
+    ],
+    image: kitchenImg3
+  }
+};
+
+function ServiceDetailModal({ serviceKey, children }: { serviceKey: keyof typeof serviceDetails, children: React.ReactNode }) {
+  const data = serviceDetails[serviceKey];
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        {children}
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[600px] font-tajawal" dir="rtl">
+        <DialogHeader>
+          <DialogTitle className="text-2xl font-bold text-primary mb-2">{data.title}</DialogTitle>
+        </DialogHeader>
+        <div className="mt-4 space-y-6">
+          <div className="rounded-xl overflow-hidden shadow-md border border-border">
+            <img src={data.image} alt={data.title} className="w-full h-64 object-cover" />
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            {data.description}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {data.features.map((feature, i) => (
+              <div key={i} className="flex items-center gap-3 bg-secondary/30 p-3 rounded-lg">
+                <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                <span className="text-sm font-medium">{feature}</span>
+              </div>
+            ))}
+          </div>
+          <Button className="w-full bg-accent hover:bg-accent/90 text-white font-bold py-6 rounded-xl text-lg" onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>
+            اطلب استشارة لهذا القسم
+          </Button>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 export default function Home() {
   const scrollToContact = () => {
@@ -96,30 +185,46 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ServiceCard 
-              icon={<ChefHat className="w-8 h-8" />}
-              title="تفصيل مطابخ"
-              description="تصاميم عصرية وكلاسيكية تناسب جميع الأذواق والمساحات، باستخدام أجود أنواع الألمنيوم والرخام."
-              delay={0.1}
-            />
-            <ServiceCard 
-              icon={<Hammer className="w-8 h-8" />}
-              title="تركيب احترافي"
-              description="فريق متخصص لتركيب المطابخ بدقة عالية لضمان المتانة والشكل الجمالي المتكامل."
-              delay={0.2}
-            />
-            <ServiceCard 
-              icon={<Wrench className="w-8 h-8" />}
-              title="صيانة وتجديد"
-              description="خدمات صيانة شاملة للمطابخ القديمة، تغيير المفصلات، وتجديد المظهر بالكامل."
-              delay={0.3}
-            />
-            <ServiceCard 
-              icon={<LayoutGrid className="w-8 h-8" />}
-              title="شبابيك المنيوم"
-              description="تفصيل وتركيب شبابيك المنيوم عازلة للصوت والحرارة بتصاميم عصرية تناسب واجهة منزلك."
-              delay={0.4}
-            />
+            <ServiceDetailModal serviceKey="kitchens">
+              <div className="cursor-pointer">
+                <ServiceCard 
+                  icon={<ChefHat className="w-8 h-8" />}
+                  title="تفصيل مطابخ"
+                  description="تصاميم عصرية وكلاسيكية تناسب جميع الأذواق والمساحات، باستخدام أجود أنواع الألمنيوم والرخام."
+                  delay={0.1}
+                />
+              </div>
+            </ServiceDetailModal>
+            <ServiceDetailModal serviceKey="design">
+              <div className="cursor-pointer">
+                <ServiceCard 
+                  icon={<Hammer className="w-8 h-8" />}
+                  title="تصميم مخصص"
+                  description="نقدم حلولاً هندسية وتصاميم ثلاثية الأبعاد مبتكرة تحاكي تطلعاتكم وتلبي احتياجاتكم."
+                  delay={0.2}
+                />
+              </div>
+            </ServiceDetailModal>
+            <ServiceDetailModal serviceKey="maintenance">
+              <div className="cursor-pointer">
+                <ServiceCard 
+                  icon={<Wrench className="w-8 h-8" />}
+                  title="صيانة وتجديد"
+                  description="خدمات صيانة شاملة للمطابخ القديمة، تغيير المفصلات، وتجديد المظهر بالكامل."
+                  delay={0.3}
+                />
+              </div>
+            </ServiceDetailModal>
+            <ServiceDetailModal serviceKey="windows">
+              <div className="cursor-pointer">
+                <ServiceCard 
+                  icon={<LayoutGrid className="w-8 h-8" />}
+                  title="شبابيك المنيوم"
+                  description="تفصيل وتركيب شبابيك المنيوم عازلة للصوت والحرارة بتصاميم عصرية تناسب واجهة منزلك."
+                  delay={0.4}
+                />
+              </div>
+            </ServiceDetailModal>
           </div>
         </div>
       </section>
