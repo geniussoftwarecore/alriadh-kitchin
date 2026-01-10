@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import logoUrl from "@assets/haron's_logo_1768070581366.png";
+import logoUrl from "@assets/000_1768074964198.png";
 
 const links = [
   { href: "/", label: "الرئيسية" },
@@ -49,7 +49,7 @@ export function Navbar() {
           <img 
             src={logoUrl} 
             alt="Riyadh Kitchens Factory" 
-            className="h-16 w-auto object-contain transition-transform group-hover:scale-105 brightness-110 contrast-125 mix-blend-multiply"
+            className="h-20 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </Link>
 

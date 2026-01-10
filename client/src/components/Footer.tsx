@@ -1,4 +1,4 @@
-import logoUrl from "@assets/haron's_logo_1768070581366.png";
+import logoUrl from "@assets/000_1768074964198.png";
 import { Phone, MapPin, Mail, Instagram, Twitter, Facebook, Video, MessageSquare, Clock } from "lucide-react";
 import { SiTiktok, SiInstagram, SiSnapchat, SiX } from "react-icons/si";
 
@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <img src={logoUrl} alt="Riyadh Kitchens Factory" className="h-20 w-auto brightness-110 contrast-125 mix-blend-screen" />
+            <img src={logoUrl} alt="Riyadh Kitchens Factory" className="h-24 w-auto" />
             <p className="text-gray-400 leading-relaxed text-lg">
               نحن في مصنع الرياض للمطابخ نقدم أفضل حلول المطابخ والألمنيوم في المملكة، بخبرة تمتد لأكثر من 16 عاماً من الإبداع والتميز.
             </p>
