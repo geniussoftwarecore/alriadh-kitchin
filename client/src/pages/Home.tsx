@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
-import { ChefHat, Hammer, Wrench, LayoutGrid, CheckCircle2, Star, Trophy, Users, Shield, Lightbulb, Recycle, Clock } from "lucide-react";
+import { ChefHat, Hammer, Wrench, LayoutGrid, CheckCircle2, Star, Trophy, Users, Shield, Lightbulb, Recycle, Clock, Mail } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 // Provided images mapping
