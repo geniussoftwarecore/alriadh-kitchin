@@ -26,7 +26,27 @@ import galleryImg11 from "@assets/تصميم_بدون_عنوان_(2)_17680776416
 import galleryImg12 from "@assets/تصميم_بدون_عنوان_(1)_1768077641649.png";
 import galleryImg13 from "@assets/WhatsApp_Image_2026-01-10_at_11.38.37_PM_1768077730451.jpeg";
 
+// New images
+import bbbImg from "@assets/bbb_1768250009045.jpeg";
+import cccImg from "@assets/ccc_1768250009046.jpeg";
+import eeeImg from "@assets/eee_1768250009047.jpeg";
+import hhhImg from "@assets/hhh_1768250009048.jpeg";
+import kkkImg from "@assets/kkk_1768250009049.jpeg";
+import kkkkImg from "@assets/kkkk_1768250009050.jpeg";
+import llllImg from "@assets/llll_1768250009051.jpeg";
+import ppppImg from "@assets/pppp_1768250009052.jpeg";
+import qqqImg from "@assets/qqq_1768250009053.jpeg";
+import ttttImg from "@assets/tttt_1768250009053.jpeg";
+import vvvImg from "@assets/vvv_1768250009054.jpeg";
+import wwwImg from "@assets/www_1768250009055.jpeg";
+import xxxImg from "@assets/xxx_1768250009056.jpeg";
+import zzzImg from "@assets/zzz_1768250009057.jpeg";
+
 const allProjectImages = [
+  bbbImg, cccImg, eeeImg, hhhImg,
+  kkkImg, kkkkImg, llllImg, ppppImg,
+  qqqImg, ttttImg, vvvImg, wwwImg,
+  xxxImg, zzzImg,
   galleryImg5, galleryImg6, galleryImg7, galleryImg8,
   galleryImg9, galleryImg10, galleryImg11, galleryImg12,
   galleryImg13,
