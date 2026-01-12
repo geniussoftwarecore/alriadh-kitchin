@@ -235,7 +235,7 @@ export default function Home() {
             </div>
           </div>
           <p className="text-sm leading-relaxed opacity-90">
-            "تجربة رائعة مع البيت العربي، دقة في المواعيد وجودة ممتازة في التركيب."
+            "تجربة رائعة مع مصنع الرياض للمطابخ، دقة في المواعيد وجودة ممتازة في التركيب."
           </p>
         </motion.div>
       </section>
