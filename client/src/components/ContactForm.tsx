@@ -26,6 +26,22 @@ export function ContactForm() {
   const onSubmit = (data: InsertContactRequest) => {
     mutation.mutate(data, {
       onSuccess: () => {
+        // WhatsApp redirection
+        const phoneNumber = "966501755938"; // Standard Saudi format for WhatsApp
+        const serviceMap: Record<string, string> = {
+          kitchen: "تفصيل مطابخ",
+          installation: "تركيب وصيانة",
+          window: "شبابيك المنيوم",
+          other: "طلب آخر"
+        };
+        
+        const message = `طلب جديد من الموقع:\n\n*الاسم:* ${data.name}\n*الجوال:* ${data.phone}\n*الخدمة:* ${serviceMap[data.serviceType]}\n*الرسالة:* ${data.message || 'لا توجد رسالة'}`;
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+        
         form.reset();
       },
     });
