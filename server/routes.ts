@@ -25,5 +25,10 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/api/contact", async (_req, res) => {
+    const requests = await storage.getAllContactRequests();
+    res.json(requests);
+  });
+
   return httpServer;
 }
