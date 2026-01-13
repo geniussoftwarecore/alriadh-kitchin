@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactRequestSchema } from "@shared/schema";
-import type { InsertContactRequest } from "@shared/routes";
+import type { InsertContactRequest } from "@shared/schema";
 import { useCreateContact } from "@/hooks/use-contact";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
