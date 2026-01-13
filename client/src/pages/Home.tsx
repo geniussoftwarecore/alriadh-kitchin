@@ -255,13 +255,6 @@ export default function Home() {
               <Button 
                 variant="outline" 
                 className="rounded-full border-primary/20 hover:bg-primary hover:text-white"
-                onClick={() => document.querySelector("#gallery")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                معرض الصور
-              </Button>
-              <Button 
-                variant="outline" 
-                className="rounded-full border-primary/20 hover:bg-primary hover:text-white"
                 onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
               >
                 من نحن
@@ -394,39 +387,6 @@ export default function Home() {
               >
                 <div className="text-4xl md:text-5xl font-bold text-accent mb-2">{stat.number}</div>
                 <div className="text-gray-300 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section id="gallery" className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">معرض أعمالنا</h2>
-            <div className="w-24 h-1.5 bg-accent mx-auto rounded-full mb-6" />
-            <p className="text-muted-foreground text-lg">تصفح مجموعة من مشاريعنا المنفذة بدقة وإتقان.</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {allProjectImages.map((img, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer group"
-              >
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <img src={img} alt={`Project ${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  </DialogTrigger>
-                  <DialogContent className="max-w-[90vw] h-[90vh] flex items-center justify-center p-0 overflow-hidden bg-black/90">
-                    <DialogTitle className="sr-only">Project Image {i}</DialogTitle>
-                    <img src={img} alt={`Project ${i}`} className="max-w-full max-h-full object-contain" />
-                  </DialogContent>
-                </Dialog>
               </motion.div>
             ))}
           </div>
