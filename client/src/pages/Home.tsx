@@ -483,15 +483,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Map Embed Placeholder - Static Image for visual */}
-              <div className="w-full h-64 bg-gray-200 rounded-2xl overflow-hidden shadow-md border border-white">
-                <img 
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop" 
-                  alt="Map Location"
-                  className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
-                  onClick={() => window.open("https://google.com/maps/search/الصناعيه%20القديم/@24.640493392944336,46.75239944458008,17z?hl=en", "_blank")}
-                />
-              </div>
+              
             </div>
 
             <ContactForm />
