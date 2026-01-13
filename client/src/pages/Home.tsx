@@ -26,6 +26,15 @@ import galleryImg11 from "@assets/تصميم_بدون_عنوان_(2)_17680776416
 import galleryImg12 from "@assets/تصميم_بدون_عنوان_(1)_1768077641649.png";
 import galleryImg13 from "@assets/WhatsApp_Image_2026-01-10_at_11.38.37_PM_1768077730451.jpeg";
 
+// New windows and aluminum images
+import winAlum1 from "@assets/شبابيك_المنيوم_(1)_1768326524162.png";
+import winAlum2 from "@assets/شبابيك_المنيوم_(2)_1768326524161.png";
+import winAlum3 from "@assets/شبابيك_المنيوم_(3)_1768326524161.png";
+import winAlum4 from "@assets/شبابيك_المنيوم_(4)_1768326524160.png";
+import winAlum5 from "@assets/شبابيك_المنيوم_(5)_1768326524160.png";
+import winAlum6 from "@assets/شبابيك_المنيوم_(6)_1768326524159.png";
+import winAlum7 from "@assets/شبابيك_المنيوم_(7)_1768326524159.png";
+
 // New images
 import bbbImg from "@assets/bbb_1768250009045.jpeg";
 import cccImg from "@assets/ccc_1768250009046.jpeg";
@@ -42,6 +51,8 @@ import xxxImg from "@assets/xxx_1768250009056.jpeg";
 import zzzImg from "@assets/zzz_1768250009057.jpeg";
 
 const allProjectImages = [
+  winAlum1, winAlum2, winAlum3, winAlum4,
+  winAlum5, winAlum6, winAlum7,
   bbbImg, cccImg, eeeImg, hhhImg,
   kkkImg, llllImg, ppppImg,
   qqqImg, ttttImg, vvvImg, wwwImg,
@@ -76,7 +87,7 @@ const serviceDetails = {
       "أنظمة إغلاق محكمة للأمان التام ومنع تسرب الغبار"
     ],
     image: windowImg,
-    images: [windowImg, galleryImg10, galleryImg11, galleryImg12, kkkImg]
+    images: [winAlum1, winAlum2, winAlum3, winAlum4, winAlum5, winAlum6, winAlum7]
   },
   maintenance: {
     title: "صيانة وتجديد شامل",
