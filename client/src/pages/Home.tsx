@@ -164,11 +164,11 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         {/* Unsplash kitchen image with dark overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent z-10" />
-          <div className="absolute inset-0 bg-black/20 z-0" />
+          <div className="absolute inset-0 bg-black/40 z-0" />
           <img
             src="https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=2768&auto=format&fit=crop" 
             alt="Modern Kitchen Background"
@@ -176,7 +176,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="container mx-auto px-4 md:px-8 relative z-20 text-center md:text-right pt-8">
+        <div className="container mx-auto px-4 md:px-8 relative z-20 text-center md:text-right pt-16 pb-12">
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}

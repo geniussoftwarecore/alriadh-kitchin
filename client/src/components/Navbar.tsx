@@ -36,7 +36,9 @@ export function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm py-0.5"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-1 ${
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-black/20 backdrop-blur-sm"
+      }`}
       dir="rtl"
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
@@ -56,12 +58,14 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className={`text-base font-semibold transition-all duration-300 hover:text-accent relative group/link ${
-                isScrolled ? "text-foreground" : "text-foreground md:text-white"
+              className={`text-base font-bold transition-all duration-300 relative group/link ${
+                isScrolled ? "text-primary hover:text-accent" : "text-white hover:text-white/80"
               }`}
             >
               {link.label}
-              <span className="absolute -bottom-1 right-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover/link:w-full" />
+              <span className={`absolute -bottom-1 right-0 w-0 h-0.5 transition-all duration-300 group-hover/link:w-full ${
+                isScrolled ? "bg-accent" : "bg-white"
+              }`} />
             </a>
           ))}
         </div>
@@ -132,7 +136,7 @@ export function Navbar() {
           
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className={isScrolled ? "text-foreground" : "text-white"}>
+              <Button variant="ghost" size="icon" className={isScrolled ? "text-primary" : "text-white"}>
                 <Menu className="w-8 h-8" />
               </Button>
             </SheetTrigger>
