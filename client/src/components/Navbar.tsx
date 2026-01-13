@@ -9,6 +9,7 @@ const links = [
   { href: "/", label: "الرئيسية" },
   { href: "#services", label: "خدماتنا" },
   { href: "#about", label: "من نحن" },
+  { href: "#gallery", label: "أعمالنا" },
   { href: "#contact", label: "اتصل بنا" },
 ];
 

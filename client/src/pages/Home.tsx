@@ -367,6 +367,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section id="gallery" className="py-12 bg-white">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h2 className="text-3xl font-bold text-primary mb-3">معرض أعمالنا</h2>
+            <div className="w-16 h-1 bg-accent mx-auto rounded-full mb-4" />
+            <p className="text-muted-foreground text-base">
+              نستعرض لكم بعضاً من مشاريعنا المنفذة بدقة وإتقان.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {allProjectImages.slice(0, 12).map((img, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                className="group relative aspect-square rounded-xl overflow-hidden shadow-md"
+              >
+                <img 
+                  src={img} 
+                  alt={`Project ${idx + 1}`} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="text-white font-bold border-2 border-white px-4 py-2 rounded-full scale-90 group-hover:scale-100 transition-transform">
+                    عرض التفاصيل
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Statistics Section */}
       <section className="py-12 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
