@@ -193,7 +193,7 @@ export default function Home() {
               الخيار الأول لتفصيل المطابخ في الرياض
             </motion.span>
             <h1 className="text-4xl md:text-6xl font-black text-white mb-3 leading-[1.1] tracking-tight">
-              نصمم <span className="text-accent underline decoration-white/20 underline-offset-8">مطبخ العمر</span> <br />
+              نصمم <span className="text-accent relative inline-block after:content-[''] after:absolute after:bottom-1 after:right-0 after:w-full after:h-1 after:bg-white/20 after:rounded-full">مطبخ العمر</span> <br />
               بإتقان لا يضاهى
             </h1>
             <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed max-w-2xl font-medium drop-shadow-md">
@@ -313,17 +313,18 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-10">
             <div className="lg:w-1/2 relative">
               <motion.div 
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="relative z-10 rounded-xl overflow-hidden shadow-lg border-4 border-white"
+                className="relative z-10 rounded-xl overflow-hidden shadow-2xl border border-white/20 group"
               >
                 {/* Unsplash kitchen craftsmanship image */}
                 <img 
                   src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=2070&auto=format&fit=crop" 
                   alt="Our Work" 
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
               <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent rounded-full opacity-20 blur-3xl" />
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary rounded-full opacity-20 blur-3xl" />
@@ -383,10 +384,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="p-2"
+                className="p-2 group cursor-default"
               >
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-1">{stat.number}</div>
-                <div className="text-gray-300 text-sm font-medium">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-accent mb-1 group-hover:scale-110 transition-transform duration-300">{stat.number}</div>
+                <div className="text-gray-300 text-sm font-medium opacity-80 group-hover:opacity-100 transition-opacity">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -404,18 +405,18 @@ export default function Home() {
               </p>
               
               <div className="space-y-8 mb-10">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent shadow-sm shrink-0">
-                    <CheckCircle2 className="w-6 h-6" />
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm border border-border/50 hover:border-accent/30 transition-all hover:shadow-md group">
+                  <div className="w-10 h-10 bg-primary/5 rounded-full flex items-center justify-center text-accent shadow-sm shrink-0 group-hover:bg-accent group-hover:text-white transition-colors">
+                    <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">موقعنا</h4>
-                    <p className="text-muted-foreground">RENA8734, 8734 شارع عبد الملك العصامي, الرياض, 12872, SA</p>
+                    <h4 className="font-bold text-lg text-primary">موقعنا</h4>
+                    <p className="text-muted-foreground text-sm">RENA8734, 8734 شارع عبد الملك العصامي, الرياض, 12872, SA</p>
                     <a 
                       href="https://google.com/maps/search/الصناعيه%20القديم/@24.640493392944336,46.75239944458008,17z?hl=en" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-accent text-sm font-semibold mt-2 inline-flex items-center gap-1"
+                      className="text-accent hover:text-primary text-sm font-semibold mt-2 inline-flex items-center gap-1 transition-colors"
                     >
                       عرض على الخريطة
                       <span className="text-lg">📍</span>
@@ -423,14 +424,14 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent shadow-sm shrink-0">
-                    <CheckCircle2 className="w-6 h-6" />
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm border border-border/50 hover:border-accent/30 transition-all hover:shadow-md group">
+                  <div className="w-10 h-10 bg-primary/5 rounded-full flex items-center justify-center text-accent shadow-sm shrink-0 group-hover:bg-accent group-hover:text-white transition-colors">
+                    <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">اتصل بنا</h4>
-                    <p className="text-muted-foreground mb-1">متواجدون يومياً من 8 صباحاً حتى 10 مساءً</p>
-                    <a href="tel:0501755938" className="text-2xl font-bold text-primary hover:text-accent transition-colors dir-ltr block">
+                    <h4 className="font-bold text-lg text-primary">اتصل بنا</h4>
+                    <p className="text-muted-foreground text-sm mb-1">متواجدون يومياً من 8 صباحاً حتى 10 مساءً</p>
+                    <a href="tel:0501755938" className="text-xl font-bold text-primary hover:text-accent transition-colors dir-ltr block">
                       0501755938
                     </a>
                   </div>

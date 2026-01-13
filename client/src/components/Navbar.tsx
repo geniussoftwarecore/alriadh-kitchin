@@ -50,17 +50,18 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className={`text-lg font-medium transition-colors hover:text-primary ${
-                isScrolled ? "text-foreground" : "text-foreground md:text-white md:drop-shadow-sm"
+              className={`text-base font-semibold transition-all duration-300 hover:text-accent relative group/link ${
+                isScrolled ? "text-foreground" : "text-foreground md:text-white"
               }`}
             >
               {link.label}
+              <span className="absolute -bottom-1 right-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover/link:w-full" />
             </a>
           ))}
         </div>
