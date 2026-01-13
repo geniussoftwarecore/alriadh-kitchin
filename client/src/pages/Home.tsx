@@ -35,6 +35,21 @@ import winAlum5 from "@assets/شبابيك_المنيوم_(5)_1768326524160.png"
 import winAlum6 from "@assets/شبابيك_المنيوم_(6)_1768326524159.png";
 import winAlum7 from "@assets/شبابيك_المنيوم_(7)_1768326524159.png";
 
+// Attached images
+import bbbAttach from "@assets/bbb_1768340662820.jpeg";
+import cccAttach from "@assets/ccc_1768340662821.jpeg";
+import eeeAttach from "@assets/eee_1768340662822.jpeg";
+import hhhAttach from "@assets/hhh_1768340662823.jpeg";
+import kkkkAttach from "@assets/kkkk_1768340662825.jpeg";
+import llllAttach from "@assets/llll_1768340662826.jpeg";
+import ppppAttach from "@assets/pppp_1768340662827.jpeg";
+import qqqAttach from "@assets/qqq_1768340662827.jpeg";
+import ttttAttach from "@assets/tttt_1768340662828.jpeg";
+import vvvAttach from "@assets/vvv_1768340662829.jpeg";
+import wwwAttach from "@assets/www_1768340662830.jpeg";
+import xxxAttach from "@assets/xxx_1768340662830.jpeg";
+import zzzAttach from "@assets/zzz_1768340662831.jpeg";
+
 // New images
 import bbbImg from "@assets/bbb_1768250009045.jpeg";
 import cccImg from "@assets/ccc_1768250009046.jpeg";
@@ -51,6 +66,9 @@ import xxxImg from "@assets/xxx_1768250009056.jpeg";
 import zzzImg from "@assets/zzz_1768250009057.jpeg";
 
 const allProjectImages = [
+  bbbAttach, cccAttach, eeeAttach, hhhAttach,
+  kkkkAttach, llllAttach, ppppAttach, qqqAttach,
+  ttttAttach, vvvAttach, wwwAttach, xxxAttach, zzzAttach,
   winAlum1, winAlum2, winAlum3, winAlum4,
   winAlum5, winAlum6, winAlum7,
   bbbImg, cccImg, eeeImg, hhhImg,
@@ -379,7 +397,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {allProjectImages.slice(0, 12).map((img, idx) => (
+            {allProjectImages.map((img, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
