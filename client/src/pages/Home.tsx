@@ -32,7 +32,6 @@ import cccImg from "@assets/ccc_1768250009046.jpeg";
 import eeeImg from "@assets/eee_1768250009047.jpeg";
 import hhhImg from "@assets/hhh_1768250009048.jpeg";
 import kkkImg from "@assets/kkk_1768250009049.jpeg";
-import kkkkImg from "@assets/kkkk_1768250009050.jpeg";
 import llllImg from "@assets/llll_1768250009051.jpeg";
 import ppppImg from "@assets/pppp_1768250009052.jpeg";
 import qqqImg from "@assets/qqq_1768250009053.jpeg";
@@ -44,7 +43,7 @@ import zzzImg from "@assets/zzz_1768250009057.jpeg";
 
 const allProjectImages = [
   bbbImg, cccImg, eeeImg, hhhImg,
-  kkkImg, kkkkImg, llllImg, ppppImg,
+  kkkImg, llllImg, ppppImg,
   qqqImg, ttttImg, vvvImg, wwwImg,
   xxxImg, zzzImg,
   galleryImg5, galleryImg6, galleryImg7, galleryImg8,
@@ -77,7 +76,7 @@ const serviceDetails = {
       "أنظمة إغلاق محكمة للأمان التام ومنع تسرب الغبار"
     ],
     image: windowImg,
-    images: [windowImg, galleryImg10, galleryImg11, galleryImg12, kkkImg, kkkkImg]
+    images: [windowImg, galleryImg10, galleryImg11, galleryImg12, kkkImg]
   },
   maintenance: {
     title: "صيانة وتجديد شامل",
