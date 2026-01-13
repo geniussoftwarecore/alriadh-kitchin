@@ -398,25 +398,35 @@ export default function Home() {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {allProjectImages.map((img, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.05 }}
-                viewport={{ once: true }}
-                className="group relative aspect-square rounded-xl overflow-hidden shadow-md"
-              >
-                <img 
-                  src={img} 
-                  alt={`Project ${idx + 1}`} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white font-bold border-2 border-white px-4 py-2 rounded-full scale-90 group-hover:scale-100 transition-transform">
-                    عرض التفاصيل
-                  </span>
-                </div>
-              </motion.div>
+              <Dialog key={idx}>
+                <DialogTrigger asChild>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.05 }}
+                    viewport={{ once: true }}
+                    className="group relative aspect-square rounded-xl overflow-hidden shadow-md cursor-pointer"
+                  >
+                    <img 
+                      src={img} 
+                      alt={`Project ${idx + 1}`} 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <LayoutGrid className="text-white w-8 h-8 opacity-70" />
+                    </div>
+                  </motion.div>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[90vw] p-0 border-none bg-transparent shadow-none">
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <img 
+                      src={img} 
+                      alt={`Project ${idx + 1}`} 
+                      className="max-w-full max-h-[85vh] object-contain rounded-lg"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
