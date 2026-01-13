@@ -180,7 +180,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background font-tajawal overflow-x-hidden" dir="rtl">
       <Navbar />
-
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         {/* Unsplash kitchen image with dark overlay */}
@@ -259,7 +258,6 @@ export default function Home() {
           </p>
         </motion.div>
       </section>
-
       {/* Services Section */}
       <section id="services" className="py-10 bg-secondary/30 relative">
         <div className="container mx-auto px-4 md:px-8">
@@ -324,7 +322,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section id="about" className="py-10 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
@@ -384,7 +381,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Gallery Section */}
       <section id="gallery" className="py-12 bg-white">
         <div className="container mx-auto px-4 md:px-8">
@@ -431,7 +427,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Statistics Section */}
       <section className="py-12 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
@@ -458,7 +453,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-10 bg-secondary/30">
         <div className="container mx-auto px-4 md:px-8">
@@ -495,7 +489,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-primary">اتصل بنا</h4>
-                    <p className="text-muted-foreground text-sm mb-1">متواجدون يومياً من 8 صباحاً حتى 10 مساءً</p>
+                    <p className="text-muted-foreground text-sm mb-1">متواجدون يومياً على مدار الساعة</p>
                     <a href="tel:0501755938" className="text-xl font-bold text-primary hover:text-accent transition-colors dir-ltr block">
                       0501755938
                     </a>
@@ -516,7 +510,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
