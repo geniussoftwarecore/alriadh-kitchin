@@ -64,7 +64,8 @@ const serviceDetails = {
       "خامات مقاومة للرطوبة والحرارة وسهلة التنظيف",
       "حلول تخزين مخفية وأدراج هيدروليكية متطورة"
     ],
-    image: kitchenImg1
+    image: kitchenImg1,
+    images: [kitchenImg1, kitchenImg2, kitchenImg3, bbbImg, cccImg, eeeImg]
   },
   windows: {
     title: "شبابيك المنيوم عازلة",
@@ -75,7 +76,8 @@ const serviceDetails = {
       "تصاميم نحيفة (Slim Frames) لزيادة الإضاءة الطبيعية",
       "أنظمة إغلاق محكمة للأمان التام ومنع تسرب الغبار"
     ],
-    image: windowImg
+    image: windowImg,
+    images: [windowImg, galleryImg10, galleryImg11, galleryImg12, kkkImg, kkkkImg]
   },
   maintenance: {
     title: "صيانة وتجديد شامل",
@@ -86,7 +88,8 @@ const serviceDetails = {
       "تحديث أنظمة الإضاءة وإضافة اكسسوارات ذكية",
       "فحص دوري وشامل لضمان سلامة جميع الوحدات"
     ],
-    image: kitchenImg2
+    image: kitchenImg2,
+    images: [kitchenImg2, galleryImg1, galleryImg2, galleryImg3, galleryImg4, hhhImg]
   },
   design: {
     title: "تصاميم معمارية خاصة",
@@ -97,7 +100,8 @@ const serviceDetails = {
       "استشارات هندسية لاختيار أفضل الخامات والألوان",
       "إدارة شاملة للمشروع من التصميم حتى التسليم"
     ],
-    image: kitchenImg3
+    image: kitchenImg3,
+    images: [kitchenImg3, galleryImg5, galleryImg6, galleryImg7, galleryImg8, galleryImg9]
   }
 };
 
@@ -108,13 +112,17 @@ function ServiceDetailModal({ serviceKey, children }: { serviceKey: keyof typeof
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px] font-tajawal" dir="rtl">
+      <DialogContent className="sm:max-w-[700px] max-h-[90vh] overflow-y-auto font-tajawal" dir="rtl">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-primary mb-2">{data.title}</DialogTitle>
         </DialogHeader>
         <div className="mt-4 space-y-6">
-          <div className="rounded-xl overflow-hidden shadow-md border border-border">
-            <img src={data.image} alt={data.title} className="w-full h-64 object-cover" />
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {data.images.map((img, idx) => (
+              <div key={idx} className="rounded-lg overflow-hidden shadow-sm border border-border aspect-square">
+                <img src={img} alt={`${data.title} ${idx + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+              </div>
+            ))}
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed">
             {data.description}

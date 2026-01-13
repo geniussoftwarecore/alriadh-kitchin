@@ -35,7 +35,7 @@ export function ContactForm() {
     <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10">
       <div className="mb-8 text-center">
         <h3 className="text-2xl font-bold text-primary">أرسل طلبك الآن</h3>
-        <p className="text-muted-foreground mt-2">املأ النموذج وسنقوم بالتواصل معك في أقرب وقت</p>
+        <p className="text-muted-foreground mt-2">سيتم إرسال طلبك إلى قسم المبيعات لدينا عبر نظام الإدارة الداخلي للتواصل معك</p>
       </div>
 
       <Form {...form}>
